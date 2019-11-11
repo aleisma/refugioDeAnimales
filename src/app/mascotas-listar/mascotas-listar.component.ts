@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MascotasService } from '../mascotas/mascotas.service';
+import { Mascota } from '../mascotas/mascota';
+
+
+
+
 
 @Component({
   selector: 'app-mascotas-listar',
@@ -7,9 +13,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MascotasListarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private mascotasService: MascotasService ) { }
+
+
+   public mascotas: Mascota[] = [];
+
 
   ngOnInit() {
+
+    this.mascotasService.getMascotas().subscribe((data) => {
+      this.mascotas = data;
+    })
+
+
   }
 
 }

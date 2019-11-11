@@ -1,14 +1,14 @@
 export interface Mascota {
 
-    id:number;
+    id: number;
 
-    nombre:string;
+    nombre: string;
 
-    tipo:any;
+    tipo: any;
 
-    edad:number;
+    edad: number;
 
-   descripcion:string;
+    descripcion: string;
 
 }
 
