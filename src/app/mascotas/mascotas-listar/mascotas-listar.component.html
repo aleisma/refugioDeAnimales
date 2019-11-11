@@ -1,0 +1,29 @@
+
+<h1>Mascotas para adoptar</h1>
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th>nombre</th>
+            <th>tipo</th>
+            <th>edad</th>
+            <th>descripcion</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let mascota of mascotas">
+        <tr>
+            <td>{{mascota.nombre}}</td>
+            <td>{{mascota.tipo}}</td>
+            <td>{{mascota.edad}}</td>
+            <td>{{mascota.descripcion}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
