@@ -28,6 +28,10 @@ export class MascotasAgregarComponent implements OnInit {
       }
        cancelForm(){
 
+          this.router.navigate(['./']);
+
+
+
        }
 
       onSubmit() {
