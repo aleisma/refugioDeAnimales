@@ -21,15 +21,20 @@ export class MascotasAgregarComponent implements OnInit {
       descripcion: ['', Validators.required]
       });
 
-      onSubmit() {
 
+      resetForm() {
+        this.profileForm.reset();
+
+      }
+       cancelForm(){
+
+       }
+
+      onSubmit() {
         this.mascotasService.addMascota(this.profileForm.value).subscribe(data => {
           this.router.navigate(['./mascotas-listar']);
           console.log("mascota agregada");
     });
-
-
-
 
       };
 

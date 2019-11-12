@@ -26,9 +26,9 @@
   <br>
   <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
 
-  <button class="btn btn-primary" >Reset</button>
+  <button class="btn btn-primary" type="reset"  (click)="resetForm()">Reset</button>
 
-  <button class="btn btn-warning-outline">Cancelar</button>
+  <button class="btn btn-warning-outline" (click)="cancelForm()">Cancelar</button>
 
 
 </form>
