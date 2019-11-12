@@ -8,8 +8,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { MascotasListarComponent } from './mascotas/mascotas-listar/mascotas-listar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MascotasService } from './mascotas/mascotas.service';
-
 import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-agregar.component' ;
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-a
     AppRoutingModule,
     ClarityModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MascotasService],
   bootstrap: [AppComponent]
