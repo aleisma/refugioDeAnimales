@@ -21,16 +21,13 @@ export class MascotasAgregarComponent implements OnInit {
       descripcion: ['', Validators.required]
       });
 
-
       resetForm() {
         this.profileForm.reset();
 
       }
        cancelForm(){
 
-          this.router.navigate(['./']);
-
-
+          this.router.navigate(['./mascotas-listar']);
 
        }
 
