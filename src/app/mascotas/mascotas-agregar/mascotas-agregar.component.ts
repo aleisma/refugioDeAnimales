@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
+import { MascotasService } from '../mascotas.service';
+import { Router} from '@angular/router';
+
 
 
 @Component({
@@ -9,21 +12,27 @@ import {FormBuilder, Validators} from '@angular/forms';
 })
 export class MascotasAgregarComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private mascotasService: MascotasService, private router: Router ) { }
 
     profileForm = this.fb.group({
       nombre: ['', Validators.required],
       tipo: ['', Validators.required],
       edad: ['', Validators.required],
       descripcion: ['', Validators.required]
-      })
+      });
 
       onSubmit() {
-        // TODO: Use EventEmitter with form value
-        console.warn(this.profileForm.value);
 
-        console.log(this.profileForm.value)
-      }
+        this.mascotasService.addMascota(this.profileForm.value).subscribe(data => {
+          this.router.navigate(['./mascotas-listar']);
+          console.log("mascota agregada");
+    });
+
+
+
+
+      };
+
 
   // constructor() { }
 

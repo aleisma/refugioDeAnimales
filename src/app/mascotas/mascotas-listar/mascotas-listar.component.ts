@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MascotasService } from '../mascotas.service';
 import { Mascota } from '../mascota';
 
+
 @Component({
   selector: 'app-mascotas-listar',
   templateUrl: './mascotas-listar.component.html',
@@ -9,8 +10,7 @@ import { Mascota } from '../mascota';
 })
 export class MascotasListarComponent implements OnInit {
 
-  constructor( private mascotasService: MascotasService ) { }
-
+  constructor( private mascotasService: MascotasService) { }
 
    public mascotas: Mascota[] = [];
 
