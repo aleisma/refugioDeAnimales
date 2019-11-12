@@ -18,6 +18,12 @@ export class MascotasService {
     return this.httpClient.get<Mascota[]>(`${this.baseURL}`);
     }
 
+  public addMascota(mascota: Mascota){
+      return this.httpClient.post<Mascota>(`${this.baseURL}`,mascota);
+    }
+
+
+
     }
 
 

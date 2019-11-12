@@ -21,7 +21,6 @@ export class MascotasListarComponent implements OnInit {
       this.mascotas = data;
     })
 
-
   }
 
 }

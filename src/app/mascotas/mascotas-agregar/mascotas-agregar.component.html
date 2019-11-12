@@ -1,43 +1,33 @@
-<script>onSubmit(f) {
-  console.log(f.value);
-}
-</script>
 
 
 <h1>Agregar Mascota para adopción</h1>
 
-<form clrForm    novalidate ng-submit="onSubmit()" #f="ngForm">
-
+    <form clrForm  [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <clr-input-container>
       <label>nombre</label>
-      <input clrInput type="text"  name="nombre"  ngModel required/>
+      <input clrInput type="text"   formControlName="nombre"  required/>
       <clr-control-error>Debe indicar su nombre</clr-control-error>
   </clr-input-container>
   <clr-input-container>
       <label>tipo</label>
-      <input clrInput type="text"  name="tipo" ngModel required/>
+      <input clrInput type="text"   formControlName="tipo"  required/>
       <clr-control-error>Debe indicar su tipo</clr-control-error>
   </clr-input-container>
   <clr-input-container>
     <label>edad</label>
-    <input clrInput type="number"  name="edad" ngModel required/>
+    <input clrInput type="number"  formControlName="edad" required/>
     <clr-control-error>Debe indicar una edad (solo numeros)</clr-control-error>
 </clr-input-container>
   <clr-input-container>
       <label>descripcion</label>
-      <input clrInput type="text"  name="descripcion" ngModel required/>
-      <clr-control-error>Debe indicar una descipción</clr-control-error>
+      <input clrInput type="text"  formControlName="descripcion"  required/>
+      <clr-control-error>Debe indicar una descripcion</clr-control-error>
   </clr-input-container>
   <br>
-  <button class="btn btn-success" type="submit" [disabled]="f.invalid">Agregar</button>
+  <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
 
-  <strong>{{f.value.nombre}} </strong>
-  <strong>{{f.value.tipo}} </strong>
-  <strong>{{f.value.edad}} </strong>
-  <strong>{{f.value.descripcion}} </strong>
-
+  <p>
+    Form Status: {{ profileForm.status }}
+  </p>
 </form>
-
-
-
 

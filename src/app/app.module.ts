@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MascotasService } from './mascotas/mascotas.service';
 import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-agregar.component' ;
 import { FormsModule } from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -26,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     ClarityModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MascotasService],
   bootstrap: [AppComponent]

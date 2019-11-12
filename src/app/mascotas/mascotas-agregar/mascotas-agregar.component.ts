@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-mascotas-agregar',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MascotasAgregarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
+
+    profileForm = this.fb.group({
+      nombre: ['', Validators.required],
+      tipo: ['', Validators.required],
+      edad: ['', Validators.required],
+      descripcion: ['', Validators.required]
+      })
+
+      onSubmit() {
+        // TODO: Use EventEmitter with form value
+        console.warn(this.profileForm.value);
+
+        console.log(this.profileForm.value)
+      }
+
+  // constructor() { }
 
   ngOnInit() {
+
   }
 
 }
