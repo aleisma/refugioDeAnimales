@@ -26,7 +26,6 @@ export class MascotasAgregarComponent implements OnInit {
 
       }
        cancelForm(){
-
           this.router.navigate(['./mascotas-listar']);
 
        }

@@ -13,6 +13,7 @@
             <th>tipo</th>
             <th>edad</th>
             <th>descripcion</th>
+            <th>acciones</th>
         </tr>
     </thead>
     <tbody *ngFor="let mascota of mascotas">
@@ -21,6 +22,7 @@
             <td>{{mascota.tipo}}</td>
             <td>{{mascota.edad}}</td>
             <td>{{mascota.descripcion}}</td>
+            <td class="service"> <a [routerLink]="['/mascotas-editar', mascota.id]"><clr-icon shape="note" size="25"></clr-icon> </a></td>
         </tr>
 
     </tbody>
