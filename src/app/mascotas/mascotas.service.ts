@@ -10,22 +10,26 @@ import { Mascota } from './mascota';
 })
 export class MascotasService {
 
-  private baseURL: string = 'http://localhost:8090/mascotas';
+  private baseURL = 'http://localhost:8090/mascotas';
 
   constructor(private httpClient: HttpClient) { }
 
-  public mascotas:Array<Mascota> = [];
+  public mascotas: Array<Mascota> = [];
 
 
-  public getMascotas(){
+  public getMascotas() {
     return this.httpClient.get<Mascota[]>(`${this.baseURL}`);
     }
 
-  public addMascota(mascota: Mascota){
-      return this.httpClient.post<Mascota>(`${this.baseURL}`,mascota);
+  public addMascota(mascota: Mascota) {
+      return this.httpClient.post<Mascota>(`${this.baseURL}`, mascota);
     }
 
-  public getMascota(id:number){
+    public updateMascota(mascota: Mascota) {
+      return this.httpClient.put<Mascota>(`${this.baseURL}`, mascota);
+    }
+
+  public getMascota(id: number) {
       return this.httpClient.get<Mascota>(`${this.baseURL}/${id}`);
     }
 

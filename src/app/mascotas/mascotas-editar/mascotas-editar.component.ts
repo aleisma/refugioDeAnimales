@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MascotasService } from '../mascotas.service';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 import { Mascota } from '../mascota';
 import { Observable } from 'rxjs';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -20,7 +20,6 @@ export class MascotasEditarComponent implements OnInit {
               private router: Router,
               private fb: FormBuilder) { }
 
-
     mascotasForm = this.fb.group({
       id: ['', Validators.required],
       nombre: ['', Validators.required],
@@ -29,11 +28,13 @@ export class MascotasEditarComponent implements OnInit {
       descripcion: ['', Validators.required]
 
 
+
     });
 
+    cancelForm() {
+      this.router.navigate(['./mascotas-listar']);
 
-  
-
+    }
   ngOnInit() {
 
     // tslint:disable-next-line: radix
@@ -42,9 +43,15 @@ export class MascotasEditarComponent implements OnInit {
     this.mascota$ = this.mascotasService.getMascota(id);
 
     this.mascota$.subscribe(data => this.mascotasForm.setValue(data));
-
-
   }
 
+  onSubmit() {
+
+    this.mascotasService.updateMascota(this.mascotasForm.value).subscribe(data => {
+      this.router.navigate(['./mascotas-listar']);
+
+});
+
+}
 
 }

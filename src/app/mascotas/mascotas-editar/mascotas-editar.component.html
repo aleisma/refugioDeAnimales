@@ -2,7 +2,7 @@
 
 <h1>Editar Mascota</h1>
 
-<form clrForm  method="POST"  [formGroup]="mascotasForm"  >
+<form clrForm    [formGroup]="mascotasForm" (ngSubmit)="onSubmit()" >
 <clr-input-container>
   <label>nombre</label>
   <input clrInput type="number"  formControlName="id" type="hidden"/>
@@ -25,7 +25,9 @@
   <clr-control-error>Debe indicar una descripcion</clr-control-error>
 </clr-input-container>
 <br>
-<button type="submit" class="btn btn-success" >Actualizar</button>
+<button class="btn btn-success" type="submit" (click)="onSubmit()">Actualizar</button>
+
+<button class="btn btn-warning-outline" (click)="cancelForm()">Cancelar</button>
 
 </form>
 
