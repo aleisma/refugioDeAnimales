@@ -25,7 +25,7 @@ export class MascotasAgregarComponent implements OnInit {
         this.profileForm.reset();
 
       }
-       cancelForm(){
+       cancelForm() {
           this.router.navigate(['./mascotas-listar']);
 
        }
@@ -36,8 +36,7 @@ export class MascotasAgregarComponent implements OnInit {
           console.log("mascota agregada");
     });
 
-      };
-
+      }
 
   // constructor() { }
 

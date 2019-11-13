@@ -15,7 +15,8 @@ const routes: Routes = [
 
   { path: 'mascotas-agregar', component: MascotasAgregarComponent},
 
-  { path: 'mascotas-editar/:id', component: MascotasEditarComponent }
+  { path: 'mascotas-editar/:id', component: MascotasEditarComponent },
+
 
 
 ];

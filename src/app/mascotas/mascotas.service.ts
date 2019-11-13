@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Mascota } from './mascota';
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -33,6 +31,9 @@ export class MascotasService {
       return this.httpClient.get<Mascota>(`${this.baseURL}/${id}`);
     }
 
+    public deleteMascota(id: number) {
+      return this.httpClient.delete<Mascota>(`${this.baseURL}/${id}`);
+    }
 
 
     }

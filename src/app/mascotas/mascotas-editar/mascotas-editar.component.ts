@@ -27,14 +27,13 @@ export class MascotasEditarComponent implements OnInit {
       edad: ['', Validators.required],
       descripcion: ['', Validators.required]
 
-
-
     });
 
     cancelForm() {
       this.router.navigate(['./mascotas-listar']);
-
     }
+
+
   ngOnInit() {
 
     // tslint:disable-next-line: radix
@@ -53,5 +52,8 @@ export class MascotasEditarComponent implements OnInit {
 });
 
 }
+
+
+
 
 }
