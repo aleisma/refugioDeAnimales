@@ -16,6 +16,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 
+
 @NgModule({
   // servicios
   declarations: [
@@ -35,7 +36,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SweetAlert2Module,
+    SweetAlert2Module
+
 
   ],
   providers: [MascotasService],

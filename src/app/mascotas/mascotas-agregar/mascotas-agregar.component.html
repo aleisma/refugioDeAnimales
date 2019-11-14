@@ -1,5 +1,4 @@
 
-
 <h1>Agregar Mascota para adopción</h1>
 
 <div class="clr-row">
@@ -8,7 +7,7 @@
       <form clrForm  method="POST"   [formGroup]="profileForm" (ngSubmit)="onSubmit()  ">
           <clr-input-container>
               <label>nombre</label>
-              <input clrInput type="text"   formControlName="nombre" required/>
+              <input clrInput type="text" id="nombre"  formControlName="nombre" required/>
               <clr-control-error *clrIfError="'required'">Debe indicar su nombre</clr-control-error>
               <clr-control-error *clrIfError="'pattern'">nombre no valido</clr-control-error>
           </clr-input-container>
@@ -20,7 +19,6 @@
           <clr-input-container>
             <label>edad</label>
             <input clrInput type="number"  formControlName="edad" min="1" max="120" required/>
-          <!--<clr-control-error>Debe indicar una edad (solo numeros)</clr-control-error>-->
 
           <clr-control-error *clrIfError="'required'">Debe indicar una edad</clr-control-error>
           <clr-control-error *clrIfError="'pattern'">edad no valida</clr-control-error>
@@ -34,11 +32,12 @@
           <br>
           <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
 
-          <button class="btn btn-primary" type="reset"  (click)="resetForm()"> Limpiar</button>
+          <button class="btn btn-primary" type="reset"  (click)="resetForm()"> Limpiar  </button>
 
           <button class="btn btn-warning-outline" (click)="cancelForm()">Cancelar</button>
 
         </form>
+
   </div>
 
 </div>
