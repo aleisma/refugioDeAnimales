@@ -4,6 +4,7 @@ import { Router, ActivatedRoute} from '@angular/router';
 import { Mascota } from '../mascota';
 import { Observable } from 'rxjs';
 import { FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -28,6 +29,7 @@ export class MascotasEditarComponent implements OnInit {
       descripcion: ['', Validators.required]
 
     });
+    title = 'sweetAlert';
 
     cancelForm() {
       this.router.navigate(['./mascotas-listar']);
@@ -45,6 +47,24 @@ export class MascotasEditarComponent implements OnInit {
   }
 
   onSubmit() {
+  
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 1000,
+      timerProgressBar: false,
+      onOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    Toast.fire({
+      icon: 'success',
+      title: 'Your pet has been edited'
+    })
+
+
 
     this.mascotasService.updateMascota(this.mascotasForm.value).subscribe(data => {
       this.router.navigate(['./mascotas-listar']);

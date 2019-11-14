@@ -12,6 +12,7 @@ import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-a
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-editar.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 
@@ -33,7 +34,9 @@ import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-edi
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module,
+
   ],
   providers: [MascotasService],
   bootstrap: [AppComponent]

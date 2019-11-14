@@ -2,34 +2,46 @@
 
 <h1>Agregar Mascota para adopción</h1>
 
-    <form clrForm  method="POST"   [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <clr-input-container>
-      <label>nombre</label>
-      <input clrInput type="text"   formControlName="nombre"  required/>
-      <clr-control-error>Debe indicar su nombre</clr-control-error>
-  </clr-input-container>
-  <clr-input-container>
-      <label>tipo</label>
-      <input clrInput type="text"   formControlName="tipo"  required/>
-      <clr-control-error>Debe indicar su tipo</clr-control-error>
-  </clr-input-container>
-  <clr-input-container>
-    <label>edad</label>
-    <input clrInput type="number"  formControlName="edad" required/>
-    <clr-control-error>Debe indicar una edad (solo numeros)</clr-control-error>
-</clr-input-container>
-  <clr-input-container>
-      <label>descripcion</label>
-      <input clrInput type="text"  formControlName="descripcion"  required/>
-      <clr-control-error>Debe indicar una descripcion</clr-control-error>
-  </clr-input-container>
-  <br>
-  <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
+<div class="clr-row">
+  <div class="clr-col-sm-12 clr-col-md-6">
 
-  <button class="btn btn-primary" type="reset"  (click)="resetForm()"> Limpiar</button>
+      <form clrForm  method="POST"   [formGroup]="profileForm" (ngSubmit)="onSubmit()  ">
+          <clr-input-container>
+              <label>nombre</label>
+              <input clrInput type="text"   formControlName="nombre" required/>
+              <clr-control-error *clrIfError="'required'">Debe indicar su nombre</clr-control-error>
+              <clr-control-error *clrIfError="'pattern'">nombre no valido</clr-control-error>
+          </clr-input-container>
+          <clr-input-container>
+              <label>tipo</label>
+              <input clrInput type="text"   formControlName="tipo"  required/>
+              <clr-control-error>Debe indicar su tipo</clr-control-error>
+          </clr-input-container>
+          <clr-input-container>
+            <label>edad</label>
+            <input clrInput type="number"  formControlName="edad" min="1" max="120" required/>
+          <!--<clr-control-error>Debe indicar una edad (solo numeros)</clr-control-error>-->
 
-  <button class="btn btn-warning-outline" (click)="cancelForm()">Cancelar</button>
+          <clr-control-error *clrIfError="'required'">Debe indicar una edad</clr-control-error>
+          <clr-control-error *clrIfError="'pattern'">edad no valida</clr-control-error>
+
+        </clr-input-container>
+          <clr-input-container>
+              <label>descripcion</label>
+          <input clrInput type="text"  formControlName="descripcion"  required/>
+              <clr-control-error>Debe indicar una descripcion</clr-control-error>
+          </clr-input-container>
+          <br>
+          <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
+
+          <button class="btn btn-primary" type="reset"  (click)="resetForm()"> Limpiar</button>
+
+          <button class="btn btn-warning-outline" (click)="cancelForm()">Cancelar</button>
+
+        </form>
+  </div>
+
+</div>
 
 
-</form>
 
