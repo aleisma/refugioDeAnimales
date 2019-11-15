@@ -29,8 +29,14 @@
           <input clrInput type="text"  formControlName="descripcion"  required/>
               <clr-control-error>Debe indicar una descripcion</clr-control-error>
           </clr-input-container>
+
+          <clr-input-container>
+          <label>foto</label>
+          <input clrInput type="file"  class="boton_personalizado" id="file">
+         </clr-input-container>
+
           <br>
-          <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
+          <button  type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>
 
           <button class="btn btn-primary" type="reset"  (click)="resetForm()"> Limpiar  </button>
 

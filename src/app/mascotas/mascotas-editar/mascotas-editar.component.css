@@ -1,0 +1,11 @@
+.form{
+    width: 400px;
+}
+
+.pet{
+    background-image: url("https://cdn.pixabay.com/photo/2015/07/09/19/32/dog-838281_960_720.jpg");
+
+    display: flexbox;
+    height: 500px;
+
+}
