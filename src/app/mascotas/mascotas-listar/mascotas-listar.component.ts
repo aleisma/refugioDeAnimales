@@ -11,9 +11,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./mascotas-listar.component.css']
 })
 export class MascotasListarComponent implements OnInit {
-  constructor(
-    private mascotasService: MascotasService,
-    private fb: FormBuilder
+
+
+  constructor(private mascotasService: MascotasService,
+              private fb: FormBuilder
   ) {}
   title = 'sweetAlert';
 

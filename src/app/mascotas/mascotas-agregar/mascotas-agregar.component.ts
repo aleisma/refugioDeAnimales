@@ -18,7 +18,8 @@ export class MascotasAgregarComponent implements OnInit {
       nombre: ['',  [Validators.required, Validators.pattern('[a-zA-Z]{2,20}')]],
       tipo: ['', Validators.required],
       edad: ['', [Validators.required, Validators.pattern('[0-9]{1,2}')]],
-      descripcion: ['', Validators.required]
+      descripcion: ['', Validators.required],
+      foto: ['', Validators.required]
       });
       title = 'sweetAlert';
 

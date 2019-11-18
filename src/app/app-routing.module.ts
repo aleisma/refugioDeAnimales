@@ -4,7 +4,6 @@ import { InicioComponent } from './inicio/inicio.component';
 import { MascotasListarComponent } from './mascotas/mascotas-listar/mascotas-listar.component';
 import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-agregar.component';
 import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-editar.component';
-import { MascotasFotoComponent } from './mascotas/mascotas-foto/mascotas-foto.component';
 
 
 const routes: Routes = [
@@ -19,8 +18,7 @@ const routes: Routes = [
 
   { path: 'mascotas-editar/:id', component: MascotasEditarComponent },
 
-  { path: 'mascotas-foto/:id', component: MascotasFotoComponent }
-
+ 
 
 
 ];

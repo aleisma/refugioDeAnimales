@@ -27,10 +27,11 @@ export class MascotasService {
       return this.httpClient.put<Mascota>(`${this.baseURL}`, mascota);
     }
 
-  public getMascota(id: number) {
+   public getMascota(id: number) {
       return this.httpClient.get<Mascota>(`${this.baseURL}/${id}`);
     }
 
+  
     public deleteMascota(id: number) {
       return this.httpClient.delete<Mascota>(`${this.baseURL}/${id}`);
     }

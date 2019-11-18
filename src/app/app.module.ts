@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule } from '@angular/common/http';
 
+
 // Services
 import { InicioComponent } from './inicio/inicio.component';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { MascotasService } from './mascotas/mascotas.service';
 import { MascotasListarComponent } from './mascotas/mascotas-listar/mascotas-listar.component';
 import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-agregar.component' ;
 import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-editar.component';
-import { MascotasFotoComponent } from './mascotas/mascotas-foto/mascotas-foto.component';
+
 
 
 @NgModule({
@@ -27,8 +28,7 @@ import { MascotasFotoComponent } from './mascotas/mascotas-foto/mascotas-foto.co
     InicioComponent,
     MascotasListarComponent,
     MascotasAgregarComponent,
-    MascotasEditarComponent,
-    MascotasFotoComponent
+    MascotasEditarComponent
 
   ],
   // modulos

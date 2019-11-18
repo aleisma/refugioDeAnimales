@@ -1,38 +1,42 @@
 
-<div class="pet">
-<h1>Editar Mascota</h1>
 
-
-<!---->
+<div class="pet" style="background-image:url('https://cdn.pixabay.com/photo/2019/09/16/17/28/cat-4481566_960_720.jpg')">
+<h1>Edit Pet</h1>
 
 <div class="clr-row">
   <div class="clr-col-9">
 <form clrForm    [formGroup]="mascotasForm" (ngSubmit)="onSubmit()" >
 <clr-input-container>
-  <label>nombre</label>
+  <label>Nombre</label>
   <input clrInput type="number"  formControlName="id" type="hidden"/>
   <input clrInput type="text"   formControlName="nombre"  required/>
   <clr-control-error>Debe indicar su nombre</clr-control-error>
 </clr-input-container>
 <clr-input-container>
-  <label>tipo</label>
+  <label>Tipo</label>
   <input clrInput type="text"   formControlName="tipo"  required/>
   <clr-control-error>Debe indicar su tipo</clr-control-error>
 </clr-input-container>
 <clr-input-container>
-<label>edad</label>
+<label>Edad</label>
 <input clrInput type="number"  formControlName="edad" required/>
 <clr-control-error>Debe indicar una edad (solo numeros)</clr-control-error>
 </clr-input-container>
 <clr-input-container >
-  <label>descripcion</label>
+  <label>Descripcion</label>
   <input class ="form" clrInput type="text"  formControlName="descripcion"  required/>
   <clr-control-error>Debe indicar una descripcion</clr-control-error>
 </clr-input-container>
+<clr-input-container >
+    <label>Foto</label>
+    <input class ="form" clrInput type="text"  formControlName="foto"  required/>
+    <clr-control-error>Debe indicar un url</clr-control-error>
+  </clr-input-container>
+
 <br>
 <button class="btn btn-success" type="submit" (click)="onSubmit()">Actualizar</button>
 
-<button class="btn btn-warning-outline" (click)="cancelForm()">Cancelar</button>
+<button class="btn btn-warning" (click)="cancelForm()">Cancelar</button>
 
 </form>
 

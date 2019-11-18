@@ -10,6 +10,8 @@ export interface Mascota {
 
     descripcion: string;
 
+    foto: string;
+
 }
 
 

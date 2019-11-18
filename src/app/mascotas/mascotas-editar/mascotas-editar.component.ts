@@ -26,7 +26,8 @@ export class MascotasEditarComponent implements OnInit {
       nombre: ['', Validators.required],
       tipo: ['', Validators.required],
       edad: ['', Validators.required],
-      descripcion: ['', Validators.required]
+      descripcion: ['', Validators.required],
+      foto: ['', Validators.required]
 
     });
     title = 'sweetAlert';
@@ -35,19 +36,20 @@ export class MascotasEditarComponent implements OnInit {
       this.router.navigate(['./mascotas-listar']);
     }
 
-
   ngOnInit() {
 
     // tslint:disable-next-line: radix
     const id = parseInt(this.route.snapshot.paramMap.get('id'));
 
     this.mascota$ = this.mascotasService.getMascota(id);
+    
 
     this.mascota$.subscribe(data => this.mascotasForm.setValue(data));
+    
   }
 
   onSubmit() {
-  
+
     const Toast = Swal.mixin({
       toast: true,
       position: 'center',
@@ -64,10 +66,10 @@ export class MascotasEditarComponent implements OnInit {
       title: 'Your pet has been edited'
     })
 
-
-
     this.mascotasService.updateMascota(this.mascotasForm.value).subscribe(data => {
+      console.table(data)
       this.router.navigate(['./mascotas-listar']);
+  
 
 });
 
