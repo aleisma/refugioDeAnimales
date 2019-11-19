@@ -25,7 +25,9 @@
     color: rgb(11, 11, 12);
   }
 
-  div{
+  .adopted{
+    background-color: rgb(71, 167, 71);
+    color: white;
 
   }
 

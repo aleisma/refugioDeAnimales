@@ -26,7 +26,9 @@
             "styles": [
               "node_modules/@clr/icons/clr-icons.min.css",
               "node_modules/@clr/ui/clr-ui.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/animate.css/animate.min.css",
+              "styles.css"
             ],
             "scripts": [
               "node_modules/@webcomponents/custom-elements/custom-elements.min.js",

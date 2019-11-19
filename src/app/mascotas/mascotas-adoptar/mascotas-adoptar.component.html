@@ -1,6 +1,7 @@
 
+<div class="animated pulse">
 
-<div class="card-columns"  >
+<div class="card-columns">
         <div class="card animated fadeIn fast" *ngFor="let mascota of mascotas">
 
                 <button type="button" class="btn btn-primary  btn-sm "> #{{mascota.nombre}} </button>
@@ -10,11 +11,15 @@
      <img class="card-img-top" src='{{mascota.foto}}' alt="{{mascota.nombre}}">
 
           <div class="card-body">
-
                 <p class="card-text">{{mascota.descripcion}}</p>
-                <button type="submit" class="btn btn-danger btn-lg btn-block " > <clr-icon shape="heart"></clr-icon> Adoptar</button>
+
           </div>
+          <button  class="btn btn-info btn-lg btn-block"  (click)="onChange(mascota.id)"   [class.adopted]="mascotaAdoptada==false"  *ngIf="mascotaAdoptada === false "> <clr-icon shape="heart"></clr-icon> Adoptar</button>
+
+
+          <button  class="btn btn-success btn-lg btn-block" *ngIf="mascotaAdoptada === true" disabled> <clr-icon shape="heart"></clr-icon> Adoptada</button>
 
         </div>
 
       </div>
+    </div>
