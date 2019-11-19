@@ -21,7 +21,7 @@ export class MascotasEditarComponent implements OnInit {
     mascota$: Observable<Mascota>;
 
     public mascotas: any = {};
-                      
+
     mascotasForm = this.fb.group({
       id: ['', Validators.required],
       nombre: ['',  [Validators.required, Validators.pattern('[a-zA-Z]{2,20}')]],
@@ -46,8 +46,8 @@ export class MascotasEditarComponent implements OnInit {
 
     this.mascota$.subscribe(data => this.mascotasForm.setValue(data));
 
-    //new
-   this.mascotasService.getInfo(id).subscribe(data => {
+    // new
+    this.mascotasService.getInfo(id).subscribe(data => {
       this.mascotas = data;
     });
 
