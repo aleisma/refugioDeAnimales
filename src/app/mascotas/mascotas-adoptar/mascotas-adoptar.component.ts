@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MascotasService } from '../mascotas.service';
 import { Mascota } from '../mascota';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mascotas-adoptar',
@@ -30,10 +29,11 @@ export class MascotasAdoptarComponent implements OnInit {
   onChange( id: number ) {
     this.mascotasService.getInfo(id).subscribe(data => {
       this.mascota = data;
-      console.table(data);
-    });
 
+    });
     this.mascotaAdoptada = true;
+    console.log("adopted")
+
   }
 
 }

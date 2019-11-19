@@ -1,25 +1,23 @@
-
 <div class="animated pulse">
 
-<div class="card-columns">
-        <div class="card animated fadeIn fast" *ngFor="let mascota of mascotas">
+  <div class="card-columns">
+          <div class="card animated fadeIn fast" *ngFor="let mascota of mascotas">
 
-                <button type="button" class="btn btn-primary  btn-sm "> #{{mascota.nombre}} </button>
-                <button type="button" class="btn btn-primary  btn-sm ">  #{{mascota.tipo}}</button>
-                      <button type="button" class="btn btn-primary  btn-sm ">#Edad:<span class="badge-primary "> {{mascota.edad}}</span>
-                          </button>
-     <img class="card-img-top" src='{{mascota.foto}}' alt="{{mascota.nombre}}">
+                  <button type="button" class="btn btn-primary  btn-sm "> #{{mascota.nombre}} </button>
+                  <button type="button" class="btn btn-primary  btn-sm ">  #{{mascota.tipo}}</button>
+                        <button type="button" class="btn btn-primary  btn-sm ">#Edad:<span class="badge-primary "> {{mascota.edad}}</span>
+                            </button>
+       <img class="card-img-top" src='{{mascota.foto}}' alt="{{mascota.nombre}}">
 
-          <div class="card-body">
-                <p class="card-text">{{mascota.descripcion}}</p>
+            <div class="card-body">
+                  <p class="card-text">{{mascota.descripcion}}</p>
+
+            </div>
+            <button  class="btn btn-info btn-lg btn-block" *ngIf="mascotaAdoptada === false" (click)="onChange(mascota.id)"> <clr-icon shape="heart"></clr-icon> Adoptar</button>
+
+            <button  class="btn btn-success btn-lg btn-block" *ngIf="mascotaAdoptada === true"  (click)="onChange(mascota.id)" > <clr-icon shape="heart"></clr-icon> Adoptada</button>
 
           </div>
-          <button  class="btn btn-info btn-lg btn-block"  (click)="onChange(mascota.id)"   [class.adopted]="mascotaAdoptada==false"  *ngIf="mascotaAdoptada === false "> <clr-icon shape="heart"></clr-icon> Adoptar</button>
-
-
-          <button  class="btn btn-success btn-lg btn-block" *ngIf="mascotaAdoptada === true" disabled> <clr-icon shape="heart"></clr-icon> Adoptada</button>
 
         </div>
-
       </div>
-    </div>

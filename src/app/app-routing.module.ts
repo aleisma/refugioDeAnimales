@@ -7,6 +7,7 @@ import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-edi
 import { MascotasAdoptarComponent } from './mascotas/mascotas-adoptar/mascotas-adoptar.component';
 
 
+
 const routes: Routes = [
 
   { path: 'inicio', component: InicioComponent},  // I created start path
@@ -20,10 +21,6 @@ const routes: Routes = [
   { path: 'mascotas-editar/:id', component: MascotasEditarComponent },
 
   { path: 'mascotas-adoptar', component: MascotasAdoptarComponent}
-
- 
-
-
 ];
 
 

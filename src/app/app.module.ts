@@ -22,6 +22,7 @@ import { MascotasAdoptarComponent } from './mascotas/mascotas-adoptar/mascotas-a
 
 
 
+
 @NgModule({
   // servicios
   declarations: [
