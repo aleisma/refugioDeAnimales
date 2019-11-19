@@ -18,6 +18,7 @@ import { MascotasService } from './mascotas/mascotas.service';
 import { MascotasListarComponent } from './mascotas/mascotas-listar/mascotas-listar.component';
 import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-agregar.component' ;
 import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-editar.component';
+import { MascotasAdoptarComponent } from './mascotas/mascotas-adoptar/mascotas-adoptar.component';
 
 
 
@@ -28,7 +29,8 @@ import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-edi
     InicioComponent,
     MascotasListarComponent,
     MascotasAgregarComponent,
-    MascotasEditarComponent
+    MascotasEditarComponent,
+    MascotasAdoptarComponent
 
   ],
   // modulos

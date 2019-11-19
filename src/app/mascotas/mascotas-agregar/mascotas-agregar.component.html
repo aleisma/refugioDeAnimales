@@ -28,9 +28,9 @@
               <clr-control-error>Debe indicar una descripcion</clr-control-error>
           </clr-input-container>
           <clr-input-container>
-
           <label>photo (url)</label>
-          <input clrInput type="text" formControlName="foto" >
+          <input clrInput type="text" formControlName="foto" required>
+          <clr-control-error>Debe indicar un url</clr-control-error>
          </clr-input-container>
          <br>
           <button  type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Agregar</button>

@@ -3,13 +3,13 @@
 
 <a><button class="btn btn-primary-outline" routerLink="/mascotas-agregar">ADD PET </button></a>
 <div class="card-columns" >
-        <div class="card" *ngFor="let mascota of mascotas">
+        <div class="card animated fadeIn fast" *ngFor="let mascota of mascotas">
                 
                 <h1 class="card-title" align="center">{{mascota.nombre}}</h1>
-                <button type="button" class="btn btn-success  btn-sm "> 
+                <button type="button" class="btn btn-primary  btn-sm "> 
                         Tipo:<span class="badge-primary "> {{mascota.tipo}}</span>
                     </button>
-                      <button type="button" class="btn btn-success  btn-sm ">
+                      <button type="button" class="btn btn-primary  btn-sm ">
                             Edad:<span class="badge-primary ">{{mascota.edad}}</span>
                           </button>
           <img class="card-img-top" src='{{mascota.foto}}' alt="Card image cap">

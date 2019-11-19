@@ -11,7 +11,7 @@ app.use(cors());
 
 
 var mascotas = [
-    {id:1,nombre:"pepe trueno",tipo:"gato",edad:3, descripcion:"gruñon y juguetón", foto:"https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg"},
+    {id:1,nombre:"pepetrueno",tipo:"gato",edad:3, descripcion:"gruñon y juguetón", foto:"https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg"},
     {id:2,nombre:"chispita",tipo:"perro", edad: 5, descripcion:"se comporta muy bien", foto:"https://cdn.pixabay.com/photo/2015/03/26/09/54/pug-690566__340.jpg"},
     {id:3,nombre:"rafael",tipo:"tortuga", edad: 2, descripcion:"le encanta la lechuga y pasear por la casa (si, también le gusta la pizza)", foto:"https://cdn.pixabay.com/photo/2016/11/22/19/26/amphibian-1850190__340.jpg"},
     {id:4,nombre:"yogui",tipo:"perro", edad: 1, descripcion:"super activo, le gusta correr mucho", foto:"https://cdn.pixabay.com/photo/2015/11/03/12/58/dog-1020790_960_720.jpg"},

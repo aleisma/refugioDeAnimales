@@ -31,6 +31,10 @@ export class MascotasService {
       return this.httpClient.get<Mascota>(`${this.baseURL}/${id}`);
     }
 
+    public getInfo(id: number) {
+      return this.httpClient.get<Mascota>(`${this.baseURL}/${id}`);
+    }
+
   
     public deleteMascota(id: number) {
       return this.httpClient.delete<Mascota>(`${this.baseURL}/${id}`);

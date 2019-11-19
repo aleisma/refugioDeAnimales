@@ -11,6 +11,15 @@ input{
     display: flexbox;
     height: 500px;
     color: white;
+}
+
+img{
+    width: 350px;
+    height: 200px;
+    max-width: 100%;
+   
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px -5px rgba(41, 40, 40, 0.75);
 
 }
 label{

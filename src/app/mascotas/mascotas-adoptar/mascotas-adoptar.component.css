@@ -1,0 +1,51 @@
+
+.badge-primary{
+    color:rgb(240, 235, 226);
+  }
+  
+  
+  
+  img{
+    height: 200px;
+    width:330px;
+    width:100%;
+  }
+  
+  .card:hover{
+  
+    -webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+  
+  }
+  p{
+   padding: 8px;
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(224, 228, 233);
+  }
+  
+  div{
+    
+  }
+  
+  .card-columns {
+  
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+     
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+  .card{
+    background-color: rgb(22, 23, 105);
+  
+  }
+  
+  h1{
+    color: white;
+  }
+
+

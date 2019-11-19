@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 import { FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
-
 @Component({
   selector: 'app-mascotas-editar',
   templateUrl: './mascotas-editar.component.html',
@@ -14,18 +13,20 @@ import Swal from 'sweetalert2';
 })
 export class MascotasEditarComponent implements OnInit {
 
-  mascota$: Observable<Mascota>;
-
   constructor(private mascotasService: MascotasService ,
               private route: ActivatedRoute,
               private router: Router,
               private fb: FormBuilder) { }
 
+    mascota$: Observable<Mascota>;
+
+    public mascotas: any = {};
+                      
     mascotasForm = this.fb.group({
       id: ['', Validators.required],
-      nombre: ['', Validators.required],
+      nombre: ['',  [Validators.required, Validators.pattern('[a-zA-Z]{2,20}')]],
       tipo: ['', Validators.required],
-      edad: ['', Validators.required],
+      edad: ['', [Validators.required, Validators.pattern('[0-9]{1,2}')]],
       descripcion: ['', Validators.required],
       foto: ['', Validators.required]
 
@@ -42,10 +43,14 @@ export class MascotasEditarComponent implements OnInit {
     const id = parseInt(this.route.snapshot.paramMap.get('id'));
 
     this.mascota$ = this.mascotasService.getMascota(id);
-    
 
     this.mascota$.subscribe(data => this.mascotasForm.setValue(data));
-    
+
+    //new
+   this.mascotasService.getInfo(id).subscribe(data => {
+      this.mascotas = data;
+    });
+
   }
 
   onSubmit() {
@@ -69,13 +74,9 @@ export class MascotasEditarComponent implements OnInit {
     this.mascotasService.updateMascota(this.mascotasForm.value).subscribe(data => {
       console.table(data)
       this.router.navigate(['./mascotas-listar']);
-  
 
 });
 
 }
-
-
-
 
 }

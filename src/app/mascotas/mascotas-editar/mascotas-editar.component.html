@@ -1,7 +1,8 @@
 
-
-<div class="pet" style="background-image:url('https://cdn.pixabay.com/photo/2019/09/16/17/28/cat-4481566_960_720.jpg')">
-<h1>Edit Pet</h1>
+<div class="pet"  >
+    <h1>Edit Pet </h1>
+    <br>
+<img src="{{mascotas.foto}}" > 
 
 <div class="clr-row">
   <div class="clr-col-9">
@@ -34,7 +35,7 @@
   </clr-input-container>
 
 <br>
-<button class="btn btn-success" type="submit" (click)="onSubmit()">Actualizar</button>
+<button class="btn btn-success" type="submit" (click)="onSubmit()" [disabled]="!profileForm.valid">Actualizar</button>
 
 <button class="btn btn-warning" (click)="cancelForm()">Cancelar</button>
 
